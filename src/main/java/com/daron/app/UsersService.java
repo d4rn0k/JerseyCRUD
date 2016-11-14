@@ -30,7 +30,6 @@ class UsersService {
         userHashMap.put("jola2", new User("jola2", getHashedPass("jola")));
     }
 
-
     /*
         Create
      */
@@ -38,6 +37,9 @@ class UsersService {
         userHashMap.put(login, new User(login, getHashedPass(textPlainPassword)));
     }
 
+    /*
+        Read
+     */
     User getUser(String login) {
         return userHashMap.get(login);
     }
@@ -54,6 +56,10 @@ class UsersService {
         addUser(newLogin, newTextPlainPassword);
     }
 
+
+    /*
+        Delete
+     */
     void deleteUser(String login) {
         userHashMap.remove(login);
     }
